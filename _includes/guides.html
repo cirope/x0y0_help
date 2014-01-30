@@ -2,7 +2,7 @@
   <h3 class="text-muted">{% t guides.title %}</h3>
 </div>
 
-{% for page in site.pages %}
+{% sorted_for page in site.pages sort_by:order %}
   {% if page.guide %}
     {% assign limit = forloop.index0 | modulo:3 %}
     {% if limit == 0 %}
@@ -20,4 +20,4 @@
     </div>
     {% endif %}
   {% endif %}
-{% endfor %}
+{% endsorted_for %}
