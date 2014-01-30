@@ -1,0 +1,11 @@
+<ul class="nav menu">
+  {% for article in site.pages %}
+    {% unless article.guide %}
+    {% if article.category == page.category %}
+      <li {% if article.url == page.url %} class="active" {% endif %}>
+        <a href="{{ article.url }}">{{ article.title }}</a>
+      </li>
+    {% endif %}
+    {% endunless %}
+  {% endfor %}
+</ul>
