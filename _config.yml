@@ -1,9 +1,16 @@
-markdown: redcarpet
-destination: help
+markdown: rdiscount
+permalink: pretty
+
+# Uncomment if you use it inside rails (ex: bloggy)
+#destination: ../../public/help
+destination: help/
+
 pygments: true
 assets:
   js_compressor:  uglifier
   css_compressor: sass
+# Uncomment if you use it inside rails (ex: bloggy)
+  #baseurl: /help/assets/
   sources:
     - _assets/images
     - _assets/javascripts
@@ -14,6 +21,7 @@ assets:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.rdoc
   - .git
   - .gitignore
 languages: ['es']
